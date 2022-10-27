@@ -1,6 +1,6 @@
 // NOTE when changing be sure to check hardcoded mask values in hub.html
+// These 3 layers are hardcoded in THREE
 export enum Layers {
-  // These 3 layers are hardcoded in THREE
   CAMERA_LAYER_DEFAULT,
   CAMERA_LAYER_XR_LEFT_EYE,
   CAMERA_LAYER_XR_RIGHT_EYE,
