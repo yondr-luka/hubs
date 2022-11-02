@@ -87,6 +87,9 @@ export default class SceneEntryManager {
     this._setupMedia();
     this._setupCamera();
 
+    const event = new Event("sceneEnter");
+    document.body.dispatchEvent(event);
+
     if (qsTruthy("offline")) return;
 
     this._spawnAvatar();
@@ -524,7 +527,7 @@ export default class SceneEntryManager {
       gainNode.connect(audioDestination);
       gainNode.gain.value = audioVolume;
 
-      const audioSystem = AFRAME.scenes[0].systems["hubs-systems"].audioSystem
+      const audioSystem = AFRAME.scenes[0].systems["hubs-systems"].audioSystem;
       audioSystem.addStreamToOutboundAudio("microphone", audioDestination.stream);
     }
 
