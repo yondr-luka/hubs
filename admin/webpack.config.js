@@ -91,6 +91,7 @@ module.exports = (env, argv) => {
     cache: {
       type: "filesystem"
     },
+
     resolve: {
       alias: {
         // aframe and networked-aframe are still using commonjs modules. three and bitecs are peer dependanciees

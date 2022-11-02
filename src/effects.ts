@@ -157,7 +157,7 @@ export function createEffectsComposer(
         imageMesh.scale.y = height;
         imageMesh.position.y = y + height / 2;
         imageMesh.position.x = 10 + width / 2;
-        imageMesh.matrixNeedsUpdate = true;
+        imageMesh.matrixWorldNeedsUpdate = true;
         y += height + 10;
       }
     };

@@ -72,6 +72,7 @@
       hubs-systems
       capture-system
       listed-media
+      spawn-dino
       local-audio-analyser
       class="grab-cursor"
       networked-scene="audio: true; debug: true; connectOnLoad: false;"
@@ -85,6 +86,13 @@
         <!-- Note our fork of aframe doesn't actually do any preloading with a-assets. These a-asset-items are only used for their src attribute. -->
         <a-asset-item id="drawing-pen" src="./assets/models/DrawingPen.glb"></a-asset-item>
         <a-asset-item id="spawn-point" src="./assets/models/spawn-point.glb"></a-asset-item>
+        <!-- <a-asset-item id="dino" src="./assets/models/dino_rex.glb"></a-asset-item> -->
+
+        <a-asset-item
+          id="dino"
+          src="https://sketchfab.com/3d-models/tyrannosaurus-rex-20-512712b314404760a860389ebd0ce78a"
+        ></a-asset-item>
+        <a-asset-item id="spoke" src="./assets/models/spoke_world.glb"></a-asset-item>
 
         <template id="template-waypoint-avatar">
           <a-entity waypoint></a-entity>
@@ -361,6 +369,9 @@
             tags="isStatic: true;"
           >
           </a-entity>
+        </template>
+        <template id="dino-template">
+          <a-entity networked="" template="#static-controlled-media" media-loader="src:#dino"> </a-entity>
         </template>
 
         <template id="static-controlled-media">
@@ -1180,6 +1191,12 @@
                     src: button"
         ></a-mixin>
       </a-assets>
+
+      <!-- <a-entity
+      gltf-model-plus="src: #spoke;"
+    >
+      </a-entity> -->
+      <!-- <a-entity light="type: directional; color: #FFF; intensity: 1" position="-1 3 0"></a-entity> -->
 
       <!-- Interactables -->
       <a-entity id="media-counter" networked-counter="max: 20;"></a-entity>

@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "outDir": "./dist/",
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "strictNullChecks": true,
     "moduleResolution": "node",
     "module": "es6",
@@ -12,13 +12,11 @@
     "isolatedModules": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "typeRoots": [
-      "./node_modules/@types",
-      "./types"
-    ]
+    // "baseUrl": "./",
+    // "paths": {
+    //   "*": ["types/*", "src/*", "node_modules/@types/*"]
+    // },
+    "typeRoots": ["./node_modules/@types", "./types"]
   },
-  "include": [
-    "types/",
-    "src/"
-  ]
+  "include": ["types/", "src/"]
 }

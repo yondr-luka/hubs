@@ -212,6 +212,7 @@ import "./components/owned-object-limiter";
 import "./components/owned-object-cleanup-timeout";
 import "./components/set-unowned-body-kinematic";
 import "./components/scalable-when-grabbed";
+import "./components/spawn-dino.js";
 import "./components/networked-counter";
 import "./components/event-repeater";
 import "./components/set-yxz-order";
@@ -310,6 +311,7 @@ const qsVREntryType = qs.get("vr_entry_type");
 
 function mountUI(props = {}) {
   const scene = document.querySelector("a-scene");
+  // scene.setAttribute("spawn-dino", "");
   const disableAutoExitOnIdle =
     qsTruthy("allow_idle") || (process.env.NODE_ENV === "development" && !qs.get("idle_timeout"));
   const forcedVREntryType = qsVREntryType;
